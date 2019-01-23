@@ -8,10 +8,10 @@
 3. 使开发同学不用特别的在意该属性为客户端属性还是服务端属性，除非为了性能才会考虑区分。可用装饰器或者元数据之类的进行标注。
 
 
-<img src="/happybang/interactive-next-demo/blob/master/Xnip2019-01-24_00-32-29.jpg?raw=true" />
-
 ## routmap
 
 1. 实现interactive-next
 2. 实现作用域，用于减少交互回传
 3. 业务层 数据层框架，结合最紧密的为Model
+
+<img src="https://github.com/happybang/interactive-next-demo/blob/master/Xnip2019-01-24_00-32-29.jpg?raw=true" />
