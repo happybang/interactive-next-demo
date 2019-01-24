@@ -14,4 +14,4 @@
 2. 实现作用域，用于减少交互回传
 3. 业务层 数据层框架，结合最紧密的为Model
 
-<img src="https://github.com/happybang/interactive-next-demo/blob/master/Xnip2019-01-24_00-32-29.jpg?raw=true" />
+<img src="http://mjs.sinaimg.cn/umd/bazaar/2019-1-24/Xnip2019-01-24_00-32-29.jpg" />
