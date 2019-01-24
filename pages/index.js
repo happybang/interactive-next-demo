@@ -4,27 +4,40 @@ import Button from 'antd/lib/button';  // 加载 JS
 import {serverMethod,clientMethod} from "../directors/index"
 class About extends Component {// Maybe this is PageComponent
   constructor(props) {
-    debugger;
+    debugger
     super(props);
     this.state={
         v1:'hahaha'
     }
   }
+  getState(){
+    return this.state;
+  }
+  lettt(){
+    return 2;
+  }
+  // getInitialProps(){
+  //   debugger;
+  //   console.log(this.lettt());
+  // }
   @clientMethod
   alertSomeThing(){
+    console.log(this.state);
     //do something at client ,you can get client state
   }
+
   @serverMethod
   onClick(){
-    //do something at server , you can get client state
-    // to do 
-    // 1。set state
-    // invoke client Method
+  
   }
+
   render() {
+    this.state={
+      v1:'nihao'
+    }
     return  (<div>
         <Button type="primary" onClick={this.onClick.bind(this)}>{this.state.v1}</Button>
-        <Button>Default</Button>
+        <Button onClick={this.alertSomeThing.bind(this)}>Default</Button>
         <Button type="dashed">Dashed</Button>
         <Button type="danger">Danger</Button>
       </div>)

@@ -1,5 +1,5 @@
 const express = require('express')
-const next = require('next')
+const next = require('interact-next')
     
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
