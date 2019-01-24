@@ -12,7 +12,6 @@ app.prepare()
       
   })
   server.get('*', (req, res) => {
-    debugger;
     return handle(req, res)
   })
   server.listen(3000, (err) => {

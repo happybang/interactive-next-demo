@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Button from 'antd/lib/button';  // 加载 JS
-import serverMethod from "../directors/index"
+import {serverMethod,clientMethod} from "../directors/index"
 class About extends Component {// Maybe this is PageComponent
   constructor(props) {
     debugger;

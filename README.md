@@ -1,7 +1,10 @@
 # interactive-next-demo
 ## 利用next.js 为基础做交互框架
-
+```
+让框架来做前后端分离，而不是开发者
+```
 ## 解决问题：
+### 面向全栈开发的同学，前后端分离会增加开发工作量
 
 1. 前后端共享state
 2. action类型操作前后端相互调用
@@ -15,3 +18,5 @@
 3. 业务层 数据层框架，结合最紧密的为Model
 
 <img src="http://mjs.sinaimg.cn/umd/bazaar/2019-1-24/Xnip2019-01-24_00-32-29.jpg" />
+
+<img src="http://mjs.sinaimg.cn/umd/bazaar/2019-1-24/Xnip2019-01-24_10-20-57.jpg"/>
