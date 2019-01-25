@@ -1,0 +1,27 @@
+stages:
+  - install_deps
+  - deploy
+cache:
+  paths:
+    - node_modules/
+    
+install_deps:
+  stage: install_deps
+  tags:
+    - SMFE_195Server
+  when: manual
+  only:
+    - master
+  script:
+    - yarn --ignore-engines
+
+deploy_production:
+  stage: deploy
+  tags:
+    - SMFE_195Server
+  when: manual
+  only:
+    - master
+  script:
+    - pm2 delete interactive_next || true
+    - pm2 start ssr.server.js --name interactive_next
