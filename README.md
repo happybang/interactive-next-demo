@@ -1,4 +1,9 @@
 # interactive-next-demo
+## 运行方法
+
+```
+node ./ssr.server.js
+```
 ## 利用next.js 为基础做交互框架
 ```
 让框架来做前后端分离，而不是开发者
