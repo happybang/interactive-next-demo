@@ -8,13 +8,11 @@ app.prepare()
 .then(() => {
   const server = express();
   server.get('/test', (req, res) => {
-      debugger;
-      
   })
   server.get('*', (req, res) => {
     return handle(req, res)
   })
-  server.listen(3000, (err) => {
+  server.listen(3098, (err) => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')
   })
