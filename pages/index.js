@@ -1,46 +1,58 @@
 import React, { Component } from "react";
 
-import Button from 'antd/lib/button';  // 加载 JS
-import {serverMethod,clientMethod} from "../directors/index"
-class About extends Component {// Maybe this is PageComponent
+import Button from "antd/lib/button"; // 加载 JS
+import { serverMethod, clientMethod } from "../directors/index";
+class About extends Component {
+  // Maybe this is PageComponent
   constructor(props) {
     super(props);
-    this.state={
-        v1:'i am default '
-    }
+    this.state = {
+      v1: "i am default server",
+      v2: "i am default client",
+      value: 0
+    };
   }
-  getState(){
+  getState() {
     return this.state;
   }
-  lettt(){
+  lettt() {
     return 2;
   }
-  // getInitialProps(){
-  //   debugger;
-  //   console.log(this.lettt());
-  // }
   // @clientMethod
-  alertSomeThing(){
-    console.log(this.state);
+  alertSomeThing() {
     this.setState({
-      v1:"i am client"
-    })
-
+      value: this.state.value + 1,
+      v2: "i am client side change"
+    });
     //do something at client ,you can get client state
   }
-
   @serverMethod
-  onClick(){
-    this.setState({
-      v1:"i am come from server"
+  onClick() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        let value = this.state.value - 1;
+        this.setState({
+          value: value,
+          v1: "i am from server side"
+        });
+        resolve();
+      }, 2000);
     });
   }
 
   render() {
-    return  (<div>
-        <Button type="primary" onClick={this.onClick.bind(this)}>{this.state.v1}</Button>
-        <Button onClick={this.alertSomeThing.bind(this)}>alertSomeThing</Button>
-      </div>)
+    return (
+      <div>
+        <input type="text" value={this.state.value} />
+        <br />
+        <Button type="primary" onClick={this.onClick.bind(this)}>
+          {this.state.v1}
+        </Button>
+        <Button onClick={this.alertSomeThing.bind(this)}>
+          {this.state.v2}
+        </Button>
+      </div>
+    );
   }
 }
 
