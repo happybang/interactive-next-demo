@@ -20,7 +20,7 @@
     "express": "^4.16.4",
     "inext-server": "^1.0.1",
     "interact-next": "^1.0.2",
-    "next": "^7.0.2",
+    "next": "^9.3.2",
     "nextjs": "^0.0.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
