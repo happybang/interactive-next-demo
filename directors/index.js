@@ -11,9 +11,11 @@ export function serverMethod(target, key, descriptor) {
         return fn.apply(this, arguments)
       } else {
         let state = this.state;
-        let method = key;
+				let method = key;
+				let me =this;
         axios.get(`http://localhost:3000/?type=xhr&&state=${JSON.stringify(state)}&&method=${method}`).then((a)=>{
-          this.setState(a.data);
+					debugger;
+          me.setState(a.data);
         })
         console.log("at brower",target, key)
          return null;
