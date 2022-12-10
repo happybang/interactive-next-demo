@@ -17,7 +17,7 @@
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "antd": "^3.12.4",
     "axios": "^0.18.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "inext-server": "^1.0.1",
     "interact-next": "^1.0.2",
     "next": "^7.0.2",
